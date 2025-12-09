@@ -1,0 +1,86 @@
+openapi: 3.0.4
+info:
+  title: Number Base Converter
+  description: Number Base Converter is a tool for converting numbers between different bases (2-36). It supports binary, octal, decimal, hexadecimal, and custom bases with comprehensive conversion results.
+  termsOfService: https://apiverve.com/terms/
+  contact:
+    name: APIVerve Support
+    email: hello@apiverve.com
+    url: https://apiverve.com/contact
+  version: 1.0.9
+externalDocs:
+  description: Learn more about APIVerve
+  url: https://docs.apiverve.com?utm_source=openapi
+servers:
+- url: https://api.apiverve.com/
+paths:
+  /v1/numberbaseconverter:
+    get:
+      summary: Convert Number Base
+      description: Number Base Converter is a tool for converting numbers between different bases (2-36). It supports binary, octal, decimal, hexadecimal, and custom bases with comprehensive conversion results.
+      operationId: numberbaseconverter
+      parameters:
+      - name: value
+        in: query
+        schema:
+          type: string
+        required: true
+        description: The number to convert
+        example: FF
+      - name: from
+        default: '10'
+        in: query
+        schema:
+          type: string
+        required: false
+        description: 'Source base (2-36, default: 10)'
+        example: '16'
+      - name: to
+        in: query
+        schema:
+          type: string
+        required: false
+        description: Target base (2-36, optional - returns all common bases if not specified)
+        example: '10'
+      responses:
+        '200':
+          description: Successful Response
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: string
+                    description: status
+                  error:
+                    type: string
+                    description: error
+                  data:
+                    type: string
+                    description: data
+              example:
+                status: ok
+                error: 
+                data:
+                  input_value: FF
+                  input_base: 16
+                  input_base_name: hexadecimal
+                  decimal_value: 255
+                  output_value: '255'
+                  output_base: 10
+                  output_base_name: decimal
+        '401':
+          description: Your request was not authorized, or your API Key was invalid
+        '404':
+          description: Requested resource was not found
+        '500':
+          description: A server error has occured, try again later
+components:
+  securitySchemes:
+    api_key:
+      type: apiKey
+      name: x-api-key
+      in: header
+security:
+- api_key: []
