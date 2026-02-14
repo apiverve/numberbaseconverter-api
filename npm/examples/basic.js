@@ -16,8 +16,8 @@ const api = new numberbaseconverterAPI({
 // Example query
 var query = {
   value: "FF",
-  from: "16",
-  to: "10"
+  from: 10,
+  to: 10
 };
 
 // Make the API request using callback
