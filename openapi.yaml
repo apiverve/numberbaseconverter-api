@@ -1,47 +1,49 @@
 openapi: 3.0.4
 info:
   title: Number Base Converter
-  description: Number Base Converter is a tool for converting numbers between different bases (2-36). It supports binary, octal, decimal, hexadecimal, and custom bases with comprehensive conversion results.
+  description: >-
+    Number Base Converter is a tool for converting numbers between different
+    bases (2-36). It supports binary, octal, decimal, hexadecimal, and custom
+    bases with comprehensive conversion results.
   termsOfService: https://apiverve.com/terms/
   contact:
     name: APIVerve Support
     email: hello@apiverve.com
     url: https://apiverve.com/contact
-  version: 1.0.9
+  version: 1.0.0
 externalDocs:
   description: Learn more about APIVerve
   url: https://docs.apiverve.com?utm_source=openapi
 servers:
-- url: https://api.apiverve.com/
+  - url: https://api.apiverve.com/
 paths:
   /v1/numberbaseconverter:
     get:
       summary: Convert Number Base
-      description: Number Base Converter is a tool for converting numbers between different bases (2-36). It supports binary, octal, decimal, hexadecimal, and custom bases with comprehensive conversion results.
+      description: Convert a number from one base to another
       operationId: numberbaseconverter
       parameters:
-      - name: value
-        in: query
-        schema:
-          type: string
-        required: true
-        description: The number to convert
-        example: FF
-      - name: from
-        default: '10'
-        in: query
-        schema:
-          type: string
-        required: false
-        description: 'Source base (2-36, default: 10)'
-        example: '16'
-      - name: to
-        in: query
-        schema:
-          type: string
-        required: false
-        description: Target base (2-36, optional - returns all common bases if not specified)
-        example: '10'
+        - name: value
+          in: query
+          schema:
+            type: string
+          required: true
+          description: The number to convert
+          example: FF
+        - name: from
+          in: query
+          schema:
+            type: integer
+          required: false
+          description: 'Source base (default: 10)'
+          example: 16
+        - name: to
+          in: query
+          schema:
+            type: integer
+          required: false
+          description: Target base (returns all common bases if not specified)
+          example: 10
       responses:
         '200':
           description: Successful Response
@@ -57,11 +59,11 @@ paths:
                     type: string
                     description: error
                   data:
-                    type: string
+                    type: object
                     description: data
               example:
                 status: ok
-                error: 
+                error: null
                 data:
                   input_value: FF
                   input_base: 16
@@ -75,7 +77,7 @@ paths:
         '404':
           description: Requested resource was not found
         '500':
-          description: A server error has occured, try again later
+          description: A server error has occurred, try again later
 components:
   securitySchemes:
     api_key:
@@ -83,4 +85,4 @@ components:
       name: x-api-key
       in: header
 security:
-- api_key: []
+  - api_key: []
