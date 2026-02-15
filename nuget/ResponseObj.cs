@@ -42,7 +42,6 @@ namespace APIVerve.API.NumberBaseConverter
         public long DecimalValue { get; set; }
 
         [JsonProperty("output_value")]
-        [JsonConverter(typeof(ParseStringConverter))]
         public long OutputValue { get; set; }
 
         [JsonProperty("output_base")]
