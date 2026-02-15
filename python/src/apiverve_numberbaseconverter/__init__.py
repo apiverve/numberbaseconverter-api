@@ -1,1 +1,3 @@
-from .apiClient import NumberbaseconverterAPIClient
+from .apiClient import NumberbaseconverterAPIClient, NumberbaseconverterAPIClientError
+
+__all__ = ['NumberbaseconverterAPIClient', 'NumberbaseconverterAPIClientError']
