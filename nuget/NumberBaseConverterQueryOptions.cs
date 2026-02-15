@@ -12,21 +12,18 @@ namespace APIVerve.API.NumberBaseConverter
     {
         /// <summary>
         /// The number to convert
-        /// Example: FF
         /// </summary>
         [JsonProperty("value")]
         public string Value { get; set; }
 
         /// <summary>
-        /// Source base (2-36, default: 10)
-        /// Example: 16
+        /// Source base (default: 10)
         /// </summary>
         [JsonProperty("from")]
         public string From { get; set; }
 
         /// <summary>
-        /// Target base (2-36, optional - returns all common bases if not specified)
-        /// Example: 10
+        /// Target base (returns all common bases if not specified)
         /// </summary>
         [JsonProperty("to")]
         public string To { get; set; }
