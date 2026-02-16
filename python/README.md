@@ -44,7 +44,11 @@ from apiverve_numberbaseconverter.apiClient import NumberbaseconverterAPIClient
 # Initialize the client with your APIVerve API key
 api = NumberbaseconverterAPIClient("[YOUR_API_KEY]")
 
-query = { "value": "FF", "from": 10, "to": 10 }
+query = {
+    "value": "FF",
+    "from": 10,
+    "to": 10
+}
 
 try:
     # Make the API call
@@ -82,7 +86,11 @@ Using the API client, you can perform requests to the API.
 ###### Define Query
 
 ```python
-query = { "value": "FF", "from": 10, "to": 10 }
+query = {
+    "value": "FF",
+    "from": 10,
+    "to": 10
+}
 ```
 
 ###### Simple Request
@@ -126,7 +134,11 @@ from apiverve_numberbaseconverter.apiClient import NumberbaseconverterAPIClient,
 
 api = NumberbaseconverterAPIClient("[YOUR_API_KEY]")
 
-query = { "value": "FF", "from": 10, "to": 10 }
+query = {
+    "value": "FF",
+    "from": 10,
+    "to": 10
+}
 
 try:
     result = api.execute(query)
@@ -147,7 +159,11 @@ from apiverve_numberbaseconverter.apiClient import NumberbaseconverterAPIClient,
 
 api = NumberbaseconverterAPIClient("[YOUR_API_KEY]")
 
-query = { "value": "FF", "from": 10, "to": 10 }
+query = {
+    "value": "FF",
+    "from": 10,
+    "to": 10
+}
 
 try:
     result = api.execute(query)
@@ -181,7 +197,11 @@ The client supports the context manager protocol for automatic resource cleanup:
 ```python
 from apiverve_numberbaseconverter.apiClient import NumberbaseconverterAPIClient, NumberbaseconverterAPIClientError
 
-query = { "value": "FF", "from": 10, "to": 10 }
+query = {
+    "value": "FF",
+    "from": 10,
+    "to": 10
+}
 
 # Using context manager ensures proper cleanup
 with NumberbaseconverterAPIClient("[YOUR_API_KEY]") as api:
@@ -207,7 +227,11 @@ from apiverve_numberbaseconverter.apiClient import NumberbaseconverterAPIClient
 # Enable debug mode
 api = NumberbaseconverterAPIClient("[YOUR_API_KEY]", debug=True)
 
-query = { "value": "FF", "from": 10, "to": 10 }
+query = {
+    "value": "FF",
+    "from": 10,
+    "to": 10
+}
 
 # Debug information will be printed to console
 result = api.execute(query)
@@ -222,8 +246,13 @@ from apiverve_numberbaseconverter.apiClient import NumberbaseconverterAPIClient
 
 api = NumberbaseconverterAPIClient("[YOUR_API_KEY]")
 
+query = {
+    "value": "FF",
+    "from": 10,
+    "to": 10
+}
+
 try:
-    query = { "value": "FF", "from": 10, "to": 10 }
     result = api.execute(query)
     print(result)
 finally:
