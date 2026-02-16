@@ -1,6 +1,6 @@
 {
   "name": "@apiverve/numberbaseconverter",
-  "version": "1.1.13",
+  "version": "1.1.14",
   "description": "Number Base Converter is a tool for converting numbers between different bases (2-36). It supports binary, octal, decimal, hexadecimal, and custom bases with comprehensive conversion results.",
   "main": "index.js",
   "types": "index.d.ts",
