@@ -30,7 +30,13 @@ The Number Base Converter API provides a simple, reliable way to integrate numbe
 ```javascript
 async function callNumberBaseConverterAPI() {
     try {
-        const response = await fetch('https://api.apiverve.com/v1/numberbaseconverter', {
+        const params = new URLSearchParams({
+            value: '255',
+            from: 10,
+            to: 10
+        });
+
+        const response = await fetch(`https://api.apiverve.com/v1/numberbaseconverter?${params}`, {
             method: 'GET',
             headers: {
                 'x-api-key': 'YOUR_API_KEY_HERE'
@@ -50,7 +56,7 @@ callNumberBaseConverterAPI();
 ### Using cURL
 
 ```bash
-curl -X GET "https://api.apiverve.com/v1/numberbaseconverter?param=value" \
+curl -X GET "https://api.apiverve.com/v1/numberbaseconverter?value=255&from=10&to=10" \
   -H "x-api-key: YOUR_API_KEY_HERE"
 ```
 
@@ -150,7 +156,7 @@ go get github.com/apiverve/numberbaseconverter-api/go
 |---------|---------|
 | **Multi-language SDKs** | Native packages for JavaScript, Python, C#, Go, and Android |
 | **Simple Integration** | Single API key authentication, consistent response format |
-| **Production Ready** | 99.9% uptime, fast response times, used by thousands of developers |
+| **Production Ready** | 99.9% uptime SLA, served from 24 global regions |
 | **Comprehensive Docs** | Full examples, OpenAPI spec, and dedicated support |
 
 ---
@@ -169,7 +175,7 @@ go get github.com/apiverve/numberbaseconverter-api/go
 The Number Base Converter API is commonly used for:
 
 - **Web Applications** - Add number base converter features to your frontend or backend
-- **Mobile Apps** - Native SDKs for iOS and Android development
+- **Mobile Apps** - Native SDKs for Android development
 - **Automation** - Integrate with n8n, Zapier, or custom workflows
 - **SaaS Products** - Enhance your product with number base converter capabilities
 - **Data Pipelines** - Process and analyze data at scale
