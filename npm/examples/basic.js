@@ -15,7 +15,7 @@ const api = new numberbaseconverterAPI({
 
 // Example query
 var query = {
-  value: "FF",
+  value: "255",
   from: 10,
   to: 10
 };
