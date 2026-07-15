@@ -12,8 +12,14 @@ public class BasicExample {
         NumberBaseConverterAPIClient client = new NumberBaseConverterAPIClient("YOUR_API_KEY_HERE");
 
         try {
-            // Execute the API request (no parameters required)
-            APIResponse response = client.execute(null);
+            // Query parameters
+            Map&lt;String, Object&gt; parameters &#x3D; new HashMap&lt;&gt;();
+        parameters.put(&quot;value&quot;, &quot;255&quot;);
+        parameters.put(&quot;from&quot;, 10);
+        parameters.put(&quot;to&quot;, 10);
+
+            // Execute the API request
+            APIResponse response = client.execute(parameters);
 
             // Check if the request was successful
             if (response.isSuccess()) {
