@@ -17,11 +17,14 @@ def call_numberbaseconverter_api():
     Make a GET request to the Number Base Converter API
     """
     try:
+        # Query parameters
+        params &#x3D; {&#x27;value&#x27;: &#x27;255&#x27;, &#x27;from&#x27;: 10, &#x27;to&#x27;: 10}
+
         headers = {
             'x-api-key': API_KEY
         }
 
-        response = requests.get(API_URL, headers=headers)
+        response = requests.get(API_URL, headers=headers, params=params)
 
         # Raise exception for HTTP errors
         response.raise_for_status()
