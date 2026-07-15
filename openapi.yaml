@@ -29,14 +29,14 @@ paths:
             type: string
           required: true
           description: The number to convert
-          example: FF
+          example: '255'
         - name: from
           in: query
           schema:
             type: integer
           required: false
           description: 'Source base (default: 10)'
-          example: 16
+          example: 10
         - name: to
           in: query
           schema:
