@@ -25,6 +25,9 @@ namespace APIVerve.API.NumberBaseConverter
 
         [JsonProperty("data")]
         public Data Data { get; set; }
+
+        [JsonProperty("premium")]
+        public Premium Premium { get; set; }
     }
 
     public partial class Data
@@ -33,21 +36,33 @@ namespace APIVerve.API.NumberBaseConverter
         public string InputValue { get; set; }
 
         [JsonProperty("input_base")]
-        public long InputBase { get; set; }
+        public long? InputBase { get; set; }
 
         [JsonProperty("input_base_name")]
         public string InputBaseName { get; set; }
 
         [JsonProperty("decimal_value")]
-        public long DecimalValue { get; set; }
+        public long? DecimalValue { get; set; }
 
         [JsonProperty("output_value")]
-        public long OutputValue { get; set; }
+        public long? OutputValue { get; set; }
 
         [JsonProperty("output_base")]
-        public long OutputBase { get; set; }
+        public long? OutputBase { get; set; }
 
         [JsonProperty("output_base_name")]
         public string OutputBaseName { get; set; }
+    }
+
+    public partial class Premium
+    {
+        [JsonProperty("message")]
+        public string Message { get; set; }
+
+        [JsonProperty("upgrade_url")]
+        public Uri UpgradeUrl { get; set; }
+
+        [JsonProperty("locked_fields")]
+        public string[] LockedFields { get; set; }
     }
 }
