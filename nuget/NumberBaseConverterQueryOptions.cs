@@ -20,12 +20,12 @@ namespace APIVerve.API.NumberBaseConverter
         /// Source base (default: 10)
         /// </summary>
         [JsonProperty("from")]
-        public string From { get; set; }
+        public int? From { get; set; }
 
         /// <summary>
         /// Target base (returns all common bases if not specified)
         /// </summary>
         [JsonProperty("to")]
-        public string To { get; set; }
+        public int? To { get; set; }
     }
 }
