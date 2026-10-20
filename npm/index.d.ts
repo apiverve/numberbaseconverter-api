@@ -25,13 +25,14 @@ declare module '@apiverve/numberbaseconverter' {
 
 
   interface NumberBaseConverterData {
-      inputValue:     null | string;
-      inputBase:      number | null;
-      inputBaseName:  null | string;
-      decimalValue:   number | null;
-      outputValue:    null | string;
-      outputBase:     number | null;
-      outputBaseName: null | string;
+      inputValue:        null | string;
+      inputBase:         number | null;
+      inputBaseName:     null | string;
+      decimalValue:      number | null;
+      decimalValueExact: null | string;
+      outputValue:       null | string;
+      outputBase:        number | null;
+      outputBaseName:    null | string;
   }
 
   export default class numberbaseconverterWrapper {
