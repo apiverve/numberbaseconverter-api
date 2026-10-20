@@ -1,13 +1,12 @@
 Number Base Converter API
 ============
 
-Number Base Converter is a tool for converting numbers between different bases (2-36). It supports binary, octal, decimal, hexadecimal, and custom bases with comprehensive conversion results.
+Number Base Converter converts numbers between any base from 2 to 36, including binary, octal, decimal, and hexadecimal. Pass a value with optional source and target bases to receive the converted string, base names, and exact decimal values.
 
-![Build Status](https://img.shields.io/badge/build-passing-green)
-![Code Climate](https://img.shields.io/badge/maintainability-B-purple)
-![Prod Ready](https://img.shields.io/badge/production-ready-blue)
 
-This is a Python API Wrapper for the [Number Base Converter API](https://apiverve.com/marketplace/numberbaseconverter?utm_source=pypi&utm_medium=readme)
+[![PyPI version](https://img.shields.io/pypi/v/apiverve-numberbaseconverter.svg)](https://pypi.org/project/apiverve-numberbaseconverter/)
+
+This is a Python wrapper for the [Number Base Converter API](https://apiverve.com/marketplace/numberbaseconverter?utm_source=pypi&utm_medium=referral&utm_content=readme)
 
 ---
 
@@ -29,8 +28,8 @@ pip3 install apiverve-numberbaseconverter
 
 ## Configuration
 
-Before using the numberbaseconverter API client, you have to setup your account and obtain your API Key.
-You can get it by signing up at [https://apiverve.com](https://apiverve.com?utm_source=pypi&utm_medium=readme)
+Before using the Number Base Converter API client, you have to setup your account and obtain your API Key.
+You can get it by signing up at [https://apiverve.com](https://apiverve.com?utm_source=pypi&utm_medium=referral&utm_content=readme)
 
 ---
 
@@ -45,7 +44,7 @@ from apiverve_numberbaseconverter.apiClient import NumberbaseconverterAPIClient
 api = NumberbaseconverterAPIClient("[YOUR_API_KEY]")
 
 query = {
-    "value": "FF",
+    "value": "255",
     "from": 10,
     "to": 10
 }
@@ -64,7 +63,7 @@ except Exception as e:
 
 ## Usage
 
-The Number Base Converter API documentation is found here: [https://docs.apiverve.com/ref/numberbaseconverter](https://docs.apiverve.com/ref/numberbaseconverter?utm_source=pypi&utm_medium=readme).
+The Number Base Converter API documentation is found here: [https://docs.apiverve.com/ref/numberbaseconverter](https://docs.apiverve.com/ref/numberbaseconverter?utm_source=pypi&utm_medium=referral&utm_content=readme).
 You can find parameters, example responses, and status codes documented here.
 
 ### Setup
@@ -87,7 +86,7 @@ Using the API client, you can perform requests to the API.
 
 ```python
 query = {
-    "value": "FF",
+    "value": "255",
     "from": 10,
     "to": 10
 }
@@ -114,6 +113,7 @@ print(result)
     "input_base": 16,
     "input_base_name": "hexadecimal",
     "decimal_value": 255,
+    "decimal_value_exact": "255",
     "output_value": "255",
     "output_base": 10,
     "output_base_name": "decimal"
@@ -135,7 +135,7 @@ from apiverve_numberbaseconverter.apiClient import NumberbaseconverterAPIClient,
 api = NumberbaseconverterAPIClient("[YOUR_API_KEY]")
 
 query = {
-    "value": "FF",
+    "value": "255",
     "from": 10,
     "to": 10
 }
@@ -160,7 +160,7 @@ from apiverve_numberbaseconverter.apiClient import NumberbaseconverterAPIClient,
 api = NumberbaseconverterAPIClient("[YOUR_API_KEY]")
 
 query = {
-    "value": "FF",
+    "value": "255",
     "from": 10,
     "to": 10
 }
@@ -198,7 +198,7 @@ The client supports the context manager protocol for automatic resource cleanup:
 from apiverve_numberbaseconverter.apiClient import NumberbaseconverterAPIClient, NumberbaseconverterAPIClientError
 
 query = {
-    "value": "FF",
+    "value": "255",
     "from": 10,
     "to": 10
 }
@@ -228,7 +228,7 @@ from apiverve_numberbaseconverter.apiClient import NumberbaseconverterAPIClient
 api = NumberbaseconverterAPIClient("[YOUR_API_KEY]", debug=True)
 
 query = {
-    "value": "FF",
+    "value": "255",
     "from": 10,
     "to": 10
 }
@@ -247,7 +247,7 @@ from apiverve_numberbaseconverter.apiClient import NumberbaseconverterAPIClient
 api = NumberbaseconverterAPIClient("[YOUR_API_KEY]")
 
 query = {
-    "value": "FF",
+    "value": "255",
     "from": 10,
     "to": 10
 }
@@ -264,7 +264,7 @@ finally:
 
 ## Customer Support
 
-Need any assistance? [Get in touch with Customer Support](https://apiverve.com/contact?utm_source=pypi&utm_medium=readme).
+Need any assistance? [Get in touch with Customer Support](https://apiverve.com/contact?utm_source=pypi&utm_medium=referral&utm_content=readme).
 
 ---
 
@@ -275,12 +275,12 @@ Stay up to date by following [@apiverveHQ](https://twitter.com/apiverveHQ) on Tw
 
 ## Legal
 
-All usage of the APIVerve website, API, and services is subject to the [APIVerve Terms of Service](https://apiverve.com/terms?utm_source=pypi&utm_medium=readme) and all legal documents and agreements.
+All usage of the APIVerve website, API, and services is subject to the [APIVerve Terms of Service](https://apiverve.com/terms?utm_source=pypi&utm_medium=referral&utm_content=readme) and all legal documents and agreements.
 
 ---
 
 ## License
-Licensed under the The MIT License (MIT)
+Licensed under the MIT License (MIT)
 
 Copyright (&copy;) 2026 APIVerve, and EvlarSoft LLC
 
