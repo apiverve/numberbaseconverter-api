@@ -44,6 +44,9 @@ namespace APIVerve.API.NumberBaseConverter
         [JsonProperty("decimal_value")]
         public long? DecimalValue { get; set; }
 
+        [JsonProperty("decimal_value_exact")]
+        public long? DecimalValueExact { get; set; }
+
         [JsonProperty("output_value")]
         public long? OutputValue { get; set; }
 
