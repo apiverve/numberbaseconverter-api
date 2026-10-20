@@ -1,13 +1,13 @@
-# [Number Base Converter API](https://apiverve.com/marketplace/numberbaseconverter?utm_source&#x3D;github&amp;utm_medium&#x3D;readme)
+# [Number Base Converter API](https://apiverve.com/marketplace/numberbaseconverter?utm_source&#x3D;github&amp;utm_medium&#x3D;referral&amp;utm_content&#x3D;readme)
 
-Number Base Converter is a tool for converting numbers between different bases (2-36). It supports binary, octal, decimal, hexadecimal, and custom bases with comprehensive conversion results.
+Number Base Converter converts numbers between any base from 2 to 36, including binary, octal, decimal, and hexadecimal. Pass a value with optional source and target bases to receive the converted string, base names, and exact decimal values.
 
 The Number Base Converter API provides a simple, reliable way to integrate number base converter functionality into your applications. Built for developers who need production-ready number base converter capabilities without the complexity of building from scratch.
 
-**[View API Details →](https://apiverve.com/marketplace/numberbaseconverter?utm_source&#x3D;github&amp;utm_medium&#x3D;readme)**
+**[View API Details →](https://apiverve.com/marketplace/numberbaseconverter?utm_source&#x3D;github&amp;utm_medium&#x3D;referral&amp;utm_content&#x3D;readme)**
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![API Status](https://img.shields.io/badge/Status-Active-green.svg)](https://apiverve.com/marketplace/numberbaseconverter?utm_source&#x3D;github&amp;utm_medium&#x3D;readme)
+[![API Status](https://img.shields.io/badge/Status-Active-green.svg)](https://apiverve.com/marketplace/numberbaseconverter?utm_source&#x3D;github&amp;utm_medium&#x3D;referral&amp;utm_content&#x3D;readme)
 [![Method](https://img.shields.io/badge/Method-GET-blue.svg)](#)
 [![Platform](https://img.shields.io/badge/Platform-Multi--Platform-orange.svg)](#installation)
 
@@ -163,7 +163,7 @@ go get github.com/apiverve/numberbaseconverter-api/go
 
 ## Documentation
 
-- 🏠 **API Home:** [Number Base Converter API](https://apiverve.com/marketplace/numberbaseconverter?utm_source&#x3D;github&amp;utm_medium&#x3D;readme)
+- 🏠 **API Home:** [Number Base Converter API](https://apiverve.com/marketplace/numberbaseconverter?utm_source&#x3D;github&amp;utm_medium&#x3D;referral&amp;utm_content&#x3D;readme)
 - 📚 **API Reference:** [docs.apiverve.com/ref/numberbaseconverter](https://docs.apiverve.com/ref/numberbaseconverter)
 - 📖 **OpenAPI Spec:** [openapi.yaml](./openapi.yaml)
 - 💡 **Examples:** [examples/](./examples/)
@@ -193,11 +193,35 @@ x-api-key: YOUR_API_KEY_HERE
 Get your API key: [https://apiverve.com](https://apiverve.com)
 
 ### Response Format
-All responses are JSON with this structure:
+
+Every APIVerve endpoint returns the same envelope — check `status`, then read `data`:
+
 ```json
 {
   "status": "ok",
+  "error": null,
   "data": { ... }
+}
+```
+
+### Example Response
+
+A real response from the Number Base Converter API:
+
+```json
+{
+  "status": "ok",
+  "error": null,
+  "data": {
+    "input_value": "FF",
+    "input_base": 16,
+    "input_base_name": "hexadecimal",
+    "decimal_value": 255,
+    "decimal_value_exact": "255",
+    "output_value": "255",
+    "output_base": 10,
+    "output_base_name": "decimal"
+  }
 }
 ```
 
@@ -205,7 +229,7 @@ All responses are JSON with this structure:
 
 ## Support & Community
 
-- 🏠 **API Home**: [Number Base Converter API](https://apiverve.com/marketplace/numberbaseconverter?utm_source&#x3D;github&amp;utm_medium&#x3D;readme)
+- 🏠 **API Home**: [Number Base Converter API](https://apiverve.com/marketplace/numberbaseconverter?utm_source&#x3D;github&amp;utm_medium&#x3D;referral&amp;utm_content&#x3D;readme)
 - 💬 **Support**: [https://apiverve.com/contact](https://apiverve.com/contact)
 - 🐛 **Issues**: [GitHub Issues](../../issues)
 - 📖 **Documentation**: [https://docs.apiverve.com](https://docs.apiverve.com)

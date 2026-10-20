@@ -2,9 +2,10 @@ openapi: 3.0.4
 info:
   title: Number Base Converter
   description: >-
-    Number Base Converter is a tool for converting numbers between different
-    bases (2-36). It supports binary, octal, decimal, hexadecimal, and custom
-    bases with comprehensive conversion results.
+    Number Base Converter converts numbers between any base from 2 to 36,
+    including binary, octal, decimal, and hexadecimal. Pass a value with
+    optional source and target bases to receive the converted string, base
+    names, and exact decimal values.
   termsOfService: https://apiverve.com/terms/
   contact:
     name: APIVerve Support
@@ -19,7 +20,7 @@ servers:
 paths:
   /v1/numberbaseconverter:
     get:
-      summary: Convert Number Base
+      summary: Number Base Converter
       description: Convert a number from one base to another
       operationId: numberbaseconverter
       parameters:
@@ -69,6 +70,7 @@ paths:
                   input_base: 16
                   input_base_name: hexadecimal
                   decimal_value: 255
+                  decimal_value_exact: '255'
                   output_value: '255'
                   output_base: 10
                   output_base_name: decimal
